@@ -1,3 +1,47 @@
-<h1>
-  {{title}}
-</h1>
+<div class="row main">
+  <div class="col-sm-3 bordered">
+    <div class="row">
+      <button (click)="addButton()" class="btn btn-info">Button</button>
+    </div>
+    <div class="row">
+      <button (click)="addInput()" class="btn btn-info">Input</button>
+    </div>
+    <div class="row">
+      <button (click)="addLabel()" class="btn btn-info">Label</button>
+    </div>
+  </div>
+  <div class="col-sm-6 bordered board">
+    <div class="board">
+      <ng-container #parent ></ng-container>
+    </div>
+  </div>
+  <div class="col-sm-3 bordered">
+    <div class="row">
+     <button (click)="currentEl.removeObject()" class="btn btn-danger">Remove</button>
+    </div>
+    <div class="row">
+      <div class="col-sm-5">Absolute X:</div>
+      <div class="col-sm-7">
+        <input type="text" [(ngModel)]="currentEl.x">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5">Absolute Y:</div>
+      <div class="col-sm-7">
+        <input type="text" [(ngModel)]="currentEl.y">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5">Width:</div>
+      <div class="col-sm-7">
+        <input type="text" [(ngModel)]="currentEl.width">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5">Text:</div>
+      <div class="col-sm-7">
+        <input type="text" [(ngModel)]="currentEl.text">
+      </div>
+    </div>
+  </div>
+</div>
